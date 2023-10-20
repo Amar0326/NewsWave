@@ -17,4 +17,4 @@ If you encounter any issues or want to suggest improvements, please [open an iss
 
 ## Contact
 
-If you have any questions or need further assistance, you can reach out to us at [contact@newswaveapp.com](mailto:contact@newswaveapp.com).
+If you have any questions or need further assistance, you can reach out to us at [amarjadhav0326@gmail.com](mailto:amarjadhav0326@gmail.com).
