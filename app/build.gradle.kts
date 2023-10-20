@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.newswave"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.newswave"
@@ -39,4 +39,11 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //responsive layout
+    implementation ("com.intuit.sdp:sdp-android:1.1.0")
+    //responsive Text
+    implementation ("com.intuit.ssp:ssp-android:1.1.0")
+    //lottie animation
+    implementation ("com.airbnb.android:lottie:6.1.0")
+
 }
