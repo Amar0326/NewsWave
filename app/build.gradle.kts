@@ -45,5 +45,5 @@ dependencies {
     implementation ("com.intuit.ssp:ssp-android:1.1.0")
     //lottie animation
     implementation ("com.airbnb.android:lottie:6.1.0")
-
+    implementation ("com.github.KwabenBerko:News-API-Java:1.0.2")
 }
