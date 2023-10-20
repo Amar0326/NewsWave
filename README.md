@@ -13,7 +13,7 @@ NewsWave is a sleek and user-friendly Android app that keeps you up-to-date with
 
 ## Bug Reporting
 
-If you encounter any issues or want to suggest improvements, please [open an issue](https://github.com/yourusername/news-wave/issues) in the GitHub repository. Please provide detailed information to help us understand and resolve the problem.
+If you encounter any issues or want to suggest improvements, please [open an issue]((https://github.com/Amar0326/NewsWave/issues)) in the GitHub repository. Please provide detailed information to help us understand and resolve the problem.
 
 ## Contact
 
