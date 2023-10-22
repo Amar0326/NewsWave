@@ -13,3 +13,9 @@ If you encounter any issues or want to suggest improvements, please [open an iss
 ## Contact
 
 If you have any questions or need further assistance, you can reach out to us at [amarjadhav0326@gmail.com](mailto:amarjadhav0326@gmail.com).
+
+## Download the APK
+
+You can download the APK file for this project by clicking the following link: [Download APK](https://drive.google.com/file/d/1LbmSELcNpmoDJWnVgOvDaNXR8h5H5YtP/view?usp=share_link)
+
+
