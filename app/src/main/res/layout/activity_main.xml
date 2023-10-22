@@ -23,6 +23,65 @@
         android:indeterminate="true"
         android:id="@+id/progress_bar"/>
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontal_buttons">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_1"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="GENERAL"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_2"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="BUSINESS"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_3"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="ENTERTAINMENT"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_4"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="HEALTH"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_5"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="SCIENCE"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_6"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="SPORTS"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_7"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/_3sdp"
+                android:text="TECHNOLOGY"/>
+        </LinearLayout>
+    </HorizontalScrollView>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
