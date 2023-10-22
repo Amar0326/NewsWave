@@ -46,4 +46,6 @@ dependencies {
     //lottie animation
     implementation ("com.airbnb.android:lottie:6.1.0")
     implementation ("com.github.KwabenBerko:News-API-Java:1.0.2")
+    //Picasso Image
+    implementation ("com.squareup.picasso:picasso:2.8")
 }
