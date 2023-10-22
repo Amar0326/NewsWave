@@ -1,5 +1,6 @@
 package com.example.newswave;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,12 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
                 .resize(400,400)
                 .centerCrop()
                 .into(holder.imageView);
+
+        holder.itemView.setOnClickListener((view -> {
+            Intent intent = new Intent(view.getContext(),NewsFullActivity.class);
+            intent.putExtra("url",article.getUrl());
+            view.getContext().startActivity(intent);
+        }));
 
 
     }

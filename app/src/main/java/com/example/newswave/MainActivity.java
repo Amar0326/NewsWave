@@ -1,6 +1,7 @@
 package com.example.newswave;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     RecyclerView recyclerView;
+    SearchView searchView;
     List<Article> articleList = new ArrayList<>();
     NewsRecyclerAdapter adapter;
 
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        recyclerView = findViewById(R.id.news_recycler_view);
+        progressIndicator = findViewById(R.id.progress_bar);
+        searchView = findViewById(R.id.search_view);
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);
@@ -47,11 +52,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_6.setOnClickListener(this);
         btn_7.setOnClickListener(this);
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
-        recyclerView = findViewById(R.id.news_recycler_view);
-        progressIndicator = findViewById(R.id.progress_bar);
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                resetButtonColors();
+                getNews("null",query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                resetButtonColors();
+                getNews("null",newText);
+                return true;
+            }
+        });
+
+
         setupRecyclerView();
-        getNews("GENERAL");
+        getNews("GENERAL",null);
     }
 
     void setupRecyclerView() {
@@ -68,16 +88,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             progressIndicator.setVisibility(View.INVISIBLE);
     }
 
-    private void getNews(String category) {
+    private void getNews(String category,String query) {
+
         if (category=="GENERAL"){
             btn_1.setBackgroundColor(getResources().getColor(R.color.default_button_color));
         }
+
         changeInProgress(true);
-        NewsApiClient newsApiClient = new NewsApiClient("ee9adb7f38c449a8999135ccba740b93");
+
+        NewsApiClient newsApiClient = new NewsApiClient("95032f6f5ff14a97b9fb7b9ce9668498");
         newsApiClient.getTopHeadlines(
                 new TopHeadlinesRequest.Builder()
                         .category(category)
                         .language("en")
+                        .q(query)
                         .build(),
                 new NewsApiClient.ArticlesResponseCallback() {
                     @Override
@@ -110,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setBackgroundColor(getResources().getColor(R.color.default_button_color));
 
         // Fetch news for the selected category
-        getNews(category);
+        getNews(category,null);
     }
 
     private void resetButtonColors() {
