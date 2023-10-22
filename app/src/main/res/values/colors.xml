@@ -5,4 +5,6 @@
 <!--NewsWave App Theme-->
     <color name="my_primary">#00897B</color>
     <color name="my_secondary">#26A69A</color>
+    <color name="default_button_color">#232D3F</color> <!-- Green color -->
+
 </resources>

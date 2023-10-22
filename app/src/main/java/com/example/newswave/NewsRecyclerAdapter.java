@@ -36,6 +36,8 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
         Picasso.get().load(article.getUrlToImage())
                 .error(R.drawable.baseline_hide_image_24)
                 .placeholder(R.drawable.baseline_hide_image_24)
+                .resize(400,400)
+                .centerCrop()
                 .into(holder.imageView);
 
 
